@@ -18,7 +18,7 @@ database         = $dir/index.txt
 new_certs_dir    = $dir/newcerts
 certificate      = $dir/CA/ca.crt
 private_key      = $dir/CA/private/ca.key
-default_days     = 730
+default_days     = 365
 default_md       = sha512
 preserve         = no                     # whether keep DN ordering
 email_in_dn      = no
@@ -35,7 +35,7 @@ copy_extensions  = copy                   # Honor extensions requested of us
 
 
 [ req ]
-default_bits       = 2048                 # Size of keys
+default_bits       = 4096                 # Size of keys
 default_keyfile    = key.pem              # name of generated keys
 default_md         = sha256               # message digest algorithm
 string_mask        = utf8only             # permitted characters
@@ -46,8 +46,8 @@ req_extensions     = v3_req
 [ req_distinguished_name ]
 0.organizationName      = Organization Name (company)
 #organizationalUnitName = Organizational Unit Name (department, division)
-#emailAddress           = Email Address
-#emailAddress_max       = 40
+emailAddress           = Email Address
+emailAddress_max       = 40
 localityName            = Locality Name (city, district)
 stateOrProvinceName     = State or Province Name (full name)
 countryName             = Country Name (2 letter code)
@@ -57,13 +57,13 @@ commonName              = Common Name (hostname, IP, or your name)
 commonName_max          = 64
 
 # Defaults:
-#0.organizationName_default     = Default ON
+0.organizationName_default      = Onova Technology
 #organizationalUnitName_default = Default UN
-#localityName_default           = Default LN
-#stateOrProvinceName_default    = Default PN
-#countryName_default            = Default CN
-#emailAddress_default           = Default EA
-commonName_default              = ${ENV::SUBJECT_ALT_NAME}
+localityName_default            = Guarulhos
+stateOrProvinceName_default     = Sao Paulo
+countryName_default             = BR
+emailAddress_default            = onova.tech@gmail.com
+commonName_default              = Onova Technology Private Certificate Authority
 
 
 [ v3_req ]

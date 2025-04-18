@@ -11,7 +11,9 @@ Me too! That's why I've created this simple project to:
 2. Provide a script (`create_ca_key.sh`) to create your own Certificate Authority to sign certificates
 3. Provide a script (`create_csr.sh`) to create keys and certificate signing requests (CSR) for your apps
 4. Provide a script (`sign_csr.sh`) to sign your CSRs
-5. Provide a script (`create_crt.sh`) to perform (3) and (4) in one step.
+5. Provide a script (`combine_csr.sh`) to combine key + crt to create a pem file and combine crt + CA.crt to create chained.crt file
+6. Provide a script (`getbase64_tar.sh`) to generate a base64 of the tar compressed files and scripts to update the cert in the server (formats available PEM and NGINX)
+7. Provide a script (`create_crt.sh`) to perform (3), (4), (5) and (6) in one step.
 
 ## Getting started
 
